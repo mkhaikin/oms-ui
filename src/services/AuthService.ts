@@ -4,6 +4,7 @@ import { AuthResponse } from '../types/AuthResponse'
 
 export default class AuthService {
     static async login(email: string, password: string): Promise<AxiosResponse<AuthResponse>> {
+        console.log("AuthService api: " + $api.toString)
         return $api.post<AuthResponse>('/login', {email, password})
     }
 
