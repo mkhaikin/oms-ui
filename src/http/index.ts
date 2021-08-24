@@ -1,7 +1,8 @@
 import axios from 'axios'
 
 //export const API_URL = `http://localhost:3000/api`
-export const API_URL = `${process.env.REACT_APP_API_URL}`
+//xport const API_URL = `${process.env.REACT_APP_API_URL}`
+export const API_URL = `https://bins-collection-mysql.herokuapp.com/api`  // heroku settings
 
 const $api = axios.create({
     withCredentials: true,
