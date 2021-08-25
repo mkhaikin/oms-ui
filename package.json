@@ -43,8 +43,7 @@
     "eject": "react-scripts eject",
     "postinstall":"npm run build tsc"
   },
-  "proxy": "https://bins-collection-mysql.herokuapp.com",
-  "eslintConfig": {
+   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
