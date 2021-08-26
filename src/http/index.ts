@@ -5,7 +5,7 @@ import axios from 'axios'
 export const API_URL = `https://bins-collection-mysql.herokuapp.com/api`  // heroku settings
 
 const $api = axios.create({
-    withCredentials: true,
+    withCredentials: false,
     baseURL: API_URL
     //baseURL: process.env.API_URL
 })
