@@ -5,7 +5,7 @@ import { AuthResponse } from '../types/AuthResponse'
 
 export default class AuthService {
     static async login(email: string, password: string): Promise<AxiosResponse<AuthResponse>> {
-        axios.get("https://bins-collection-mysql.herokuapp.com/api/test/staff/users")
+        return axios.get("https://bins-collection-mysql.herokuapp.com/api/test/staff/users")
         //return $api.post<AuthResponse>('/login', {email, password})
     }
 
