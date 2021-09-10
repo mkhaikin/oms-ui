@@ -5,8 +5,13 @@ import { AuthResponse } from '../types/AuthResponse'
 
 export default class AuthService {
     static async login(email: string, password: string): Promise<AxiosResponse<AuthResponse>> {
-        return axios.get("https://bins-collection-mysql.herokuapp.com/api/test/staff/users")
-        //return $api.post<AuthResponse>('/login', {email, password})
+        axios.get("https://bins-collection-mysql.herokuapp.com/api/test/staff/users").then(res=>{
+            const data = res.data;
+            console.log("Response: " + res.data);
+            
+        })
+       
+       return $api.post<AuthResponse>('/login', {email, password})
     }
 
     static async registration(email: string, password: string): Promise<AxiosResponse<AuthResponse>> {
