@@ -12,12 +12,9 @@ export default class AuthService {
             
         })
        
-       //return $api.post<AuthResponse>('/login', {email, password})
-       $api.post<AuthResponse>('/login', {email, password}).then((res) => {
-           console.log(res)
-           return res
-        })
-       .catch((err) => console.log(err))
+       return await $api.post<AuthResponse>('/login', {email, password})
+    
+       //post(‘url’, {timeout: 3000})
     }
 
     static async registration(email: string, password: string): Promise<AxiosResponse<AuthResponse>> {
