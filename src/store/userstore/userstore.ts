@@ -35,7 +35,7 @@ export default class UserStore{
             this.setAuth(true)
             this.setUser(response.data.user)
         } catch (e) {
-            console.log(e.response?.data?.message)
+            console.log(e)
         }
     }
 
@@ -48,7 +48,7 @@ export default class UserStore{
             this.setAuth(true)
             this.setUser(response.data.user)
         } catch (e) {
-            console.log(e.response?.data?.message)
+            console.log(e)
         }
     }
 
@@ -60,7 +60,7 @@ export default class UserStore{
                 this.setUser({} as IUser)
             })
         } catch (e) {
-            console.log(e.response?.data?.message)
+            console.log(e)
         }
     }
 
@@ -75,7 +75,7 @@ export default class UserStore{
             this.setUser(response.data.user)
             console.log("checkAuth, this.user: " + this.user.userbadge._positionid)
         } catch (e){
-            console.log(e.response?.data?.message)
+            console.log(e)
         }finally{
             this.setLoading(false)
         }
