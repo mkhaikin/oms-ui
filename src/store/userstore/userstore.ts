@@ -30,10 +30,12 @@ export default class UserStore{
         try {
             console.log("Userstore ----------------------, login")
             const response = await AuthService.login(email, password)
-            console.log("Userstore, login: " + response.data.accessToken)
+            console.log("Userstore, login, position id: " + response.data.user.userbadge._positionid)
+            
             localStorage.setItem('token', response.data.accessToken)
             this.setAuth(true)
             this.setUser(response.data.user)
+            console.log("Userstore ------------------End, login")
         } catch (e) {
             console.log(e)
         }
