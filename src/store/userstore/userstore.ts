@@ -30,7 +30,7 @@ export default class UserStore{
         try {
             console.log("Userstore ----------------------, login")
             const response = await AuthService.login(email, password)
-            console.log("Userstore, login: " + response)
+            console.log("Userstore, login: " + response.data.accessToken)
             localStorage.setItem('token', response.data.accessToken)
             this.setAuth(true)
             this.setUser(response.data.user)
@@ -73,6 +73,7 @@ export default class UserStore{
             localStorage.setItem('token', response.data.accessToken)
             this.setAuth(true)
             this.setUser(response.data.user)
+            console.log("user position id: " + response.data.user.userbadge._positionid)
             //console.log("checkAuth, this.user: " + this.user.userbadge._positionid)
         } catch (e){
             console.log(e)

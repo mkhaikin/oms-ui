@@ -12,7 +12,7 @@ export default class AuthService {
         */
        
         const postresp = await $api.post<AuthResponse>('/login', {email, password})
-        console.log("postresp: " + postresp.data);
+        console.log("postresp: " + postresp.data.user.userbadge._positionid);
         return postresp
        //post(‘url’, {timeout: 3000})
     }
