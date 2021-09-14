@@ -27,10 +27,11 @@ function App() {
     (async function(){
       try{
                       if(localStorage.getItem('token')){
+                        console.log("App: ----Start checkAuth ------------------------------------------")
                         await userstore.checkAuth()
-                        console.log("User: ----Start  ---------------------------------------------------")
-                        console.log("User: " + userstore.user.userbadge._positionid)
-                        console.log("User: -----End  --------------------------------------------------")
+                       
+                        //console.log("User: " + userstore.user.userbadge._positionid)
+                        //console.log("User: -----End  --------------------------------------------------")
                       }
       }catch(e){
         console.error(e);

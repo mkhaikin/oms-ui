@@ -73,7 +73,7 @@ export default class UserStore{
             localStorage.setItem('token', response.data.accessToken)
             this.setAuth(true)
             this.setUser(response.data.user)
-            console.log("checkAuth, this.user: " + this.user.userbadge._positionid)
+            //console.log("checkAuth, this.user: " + this.user.userbadge._positionid)
         } catch (e){
             console.log(e)
         }finally{
