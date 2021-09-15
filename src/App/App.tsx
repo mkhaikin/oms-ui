@@ -28,6 +28,7 @@ function App() {
       try{
                       if(localStorage.getItem('token')){
                         console.log("App: ----Start checkAuth ------------------------------------------")
+                        console.log("localStorage.getItem('token'): " + localStorage.getItem('token'))
                         await userstore.checkAuth()
                        
                         //console.log("User: " + userstore.user.userbadge._positionid)
@@ -36,6 +37,7 @@ function App() {
       }catch(e){
         console.error(e);
       }
+      console.log("userstore.isAuth: " + userstore.isAuth)
     })()
   }, [])
 
