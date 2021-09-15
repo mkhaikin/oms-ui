@@ -37,7 +37,7 @@ function App() {
         console.error(e);
       }
     })()
-  }, [userstore.isAuth])
+  }, [])
 
 
   if(userstore.isLoading ){
