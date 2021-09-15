@@ -15,7 +15,9 @@ export default class UserStore{
     }
 
     setAuth(bool: boolean){
+        console.log("Userstore, setAuth ------------------Start")
         this.isAuth = bool
+        console.log("Userstore, setAuth ------------------End")
     }
 
     setUser(user: IUser) {
@@ -35,6 +37,7 @@ export default class UserStore{
             console.log("Userstore, login, position id: " + response.data.user.userbadge._positionid)
             console.log("Userstore ----------------- 0, login")
             localStorage.setItem('token', response.data.accessToken)
+            console.log("Userstore ----------------- 00, login")
             this.setAuth(true)
             console.log("Userstore ----------------- 1, login")
             this.setUser(response.data.user)
