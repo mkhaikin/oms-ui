@@ -37,13 +37,14 @@ export default class UserStore{
             console.log("Userstore, login, position id: " + response.data.user.userbadge._positionid)
             console.log("Userstore ----------------- 0, login")
             localStorage.setItem('token', response.data.accessToken)
-            console.log("Userstore ----------------- 00, login")
-            this.setAuth(true)
             console.log("Userstore ----------------- 1, login")
             this.setUser(response.data.user)
+            console.log("Userstore ------------------2, login")
+            this.setAuth(true)
             console.log("Userstore ------------------End, login")
+            
         } catch (e) {
-            console.log(e)
+            console.log("login error: " + e)
         }
     }
 
