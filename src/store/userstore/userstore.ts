@@ -19,7 +19,9 @@ export default class UserStore{
     }
 
     setUser(user: IUser) {
+        console.log("Userstore, setUser ------------------Start")
         this.user = user
+        console.log("Userstore, setUser ------------------End")
     }
 
     setLoading(bool:boolean){
@@ -34,6 +36,7 @@ export default class UserStore{
             
             localStorage.setItem('token', response.data.accessToken)
             this.setAuth(true)
+            console.log("Userstore ----------------- 1, login")
             this.setUser(response.data.user)
             console.log("Userstore ------------------End, login")
         } catch (e) {
