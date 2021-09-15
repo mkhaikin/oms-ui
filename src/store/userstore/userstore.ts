@@ -85,7 +85,7 @@ export default class UserStore{
             console.log("user position id: " + response.data.user.userbadge._positionid)
             //console.log("checkAuth, this.user: " + this.user.userbadge._positionid)
         } catch (e){
-            console.log(e)
+            console.log("checkAuth,err: " + e)
         }finally{
             this.setLoading(false)
         }
