@@ -1,11 +1,10 @@
 import axios from 'axios'
 import { config } from 'process'
+import { AuthResponse } from "../types/AuthResponse";
 
 //export const API_URL = `http://localhost:3000/api`
 //export const API_URL = `${process.env.REACT_APP_API_URL}`
 export const API_URL = `https://bins-collection-mysql.herokuapp.com/api`  // heroku settings
-import { AuthResponse } from "../types/AuthResponse";
-
 
 const $api = axios.create({
     withCredentials: true,
