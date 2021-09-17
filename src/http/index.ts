@@ -18,7 +18,7 @@ $api.interceptors.request.use((config) => {
     return config
 })
 
-$api.interceptors.response.use((config) =>{
+$api.interceptors.response.use((config) =>{ //in case of 401
     return config
 }, async (error) =>{
     const originalRequest = error.config
