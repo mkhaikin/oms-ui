@@ -30,7 +30,10 @@ function App() {
                         console.log("App: ----Start checkAuth ------------------------------------------")
                         console.log("localStorage.getItem('token'): " + localStorage.getItem('token'))
                         await userstore.checkAuth()
-                       
+                        if(userstore.isAuth)
+                          console.log("isAuth = TRUE")
+                        else
+                          console.log("isAuth = FALSE")
                         //console.log("User: " + userstore.user.userbadge._positionid)
                         //console.log("User: -----End  --------------------------------------------------")
                       }
