@@ -35,6 +35,7 @@ export default class UserStore{
             console.log("Userstore ----------------------, login")
             const response = await AuthService.login(email, password)
             console.log("Userstore, login, position id: " + response.data.user.userbadge._positionid)
+            
             console.log("Userstore ----------------- 0, login")
             localStorage.setItem('token', response.data.accessToken)
             console.log("Userstore ----------------- 1, login")
