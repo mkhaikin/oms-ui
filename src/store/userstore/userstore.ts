@@ -17,7 +17,7 @@ export default class UserStore{
     setAuth(bool: boolean){
         console.log("Userstore, setAuth ------------------Start")
         this.isAuth = bool
-        console.log("Userstore, setAuth ------------------End")
+        console.log("Userstore, setAuth ------------------End: isAuth= " + this.isAuth)
     }
 
     setUser(user: IUser) {
