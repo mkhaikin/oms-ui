@@ -16,12 +16,13 @@ export const Context = createContext<State>({
 })
 
 ReactDOM.render(
- 
+  <Context.Provider value={ {userstore} }>
     <Provider store={store}>
-       <Context.Provider value={ {userstore} }>
+      
       <App />
-      </Context.Provider>
-    </Provider>,
+     
+    </Provider>
+    </Context.Provider>,
   document.getElementById('root')
 );
 
