@@ -7,7 +7,7 @@ import { API_URL } from "../../http";
 
 export default class UserStore{
     user = {} as IUser
-    isAuth = false
+    isAuth = true
     isLoading = false
 
     constructor(){
