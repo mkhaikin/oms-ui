@@ -54,7 +54,7 @@ export default class UserStore{
             console.log("registration, email: " + email + ", password: " + password)
             const response = await AuthService.registration(email, password)
             console.log("registration: " + response)
-            localStorage.setItem('token', response.data.accessToken)
+            //localStorage.setItem('token', response.data.accessToken)
             this.setAuth(true)
             this.setUser(response.data.user)
         } catch (e) {
@@ -65,7 +65,7 @@ export default class UserStore{
     async logout(){
         try {
             AuthService.logout().then(()=>{
-                localStorage.removeItem('token')
+                //localStorage.removeItem('token')
                 this.setAuth(false)
                 this.setUser({} as IUser)
             })
@@ -80,7 +80,7 @@ export default class UserStore{
         try{
             const response = await axios.get<AuthResponse>(`${API_URL}/refresh`, {withCredentials: true})
             
-            localStorage.setItem('token', response.data.accessToken)
+            //localStorage.setItem('token', response.data.accessToken)
             this.setAuth(true)
             this.setUser(response.data.user)
             console.log("user position id: " + response.data.user.userbadge._positionid)
