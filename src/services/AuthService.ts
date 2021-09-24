@@ -5,6 +5,7 @@ import { AuthResponse } from '../types/AuthResponse'
 
 export default class AuthService {
     static async login(email: string, password: string): Promise<AxiosResponse<AuthResponse>> {
+        try{
         /*
         const res = await axios.get("https://bins-collection-mysql.herokuapp.com/api/test/staff/users")
         const data = res.data;
@@ -15,6 +16,9 @@ export default class AuthService {
         console.log("postresp: " + postresp.data.user.userbadge._positionid);
         return postresp
        //post(‘url’, {timeout: 3000})
+        } catch(e){
+            console.log("Error in login: " + e)
+        }
     }
 
     static async registration(email: string, password: string): Promise<AxiosResponse<AuthResponse>> {
