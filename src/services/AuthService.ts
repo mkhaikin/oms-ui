@@ -10,7 +10,7 @@ export default class AuthService {
         const data = res.data;
         console.log("Response: " + res.data);
         */
-       
+        console.log("login start post....");
         const postresp = await $api.post<AuthResponse>('/login', {email, password})
         console.log("postresp: " + postresp.data.user.userbadge._positionid);
         return postresp
