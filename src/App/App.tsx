@@ -23,9 +23,10 @@ const useStyles = makeStyles({
 function App() {
   const classes = useStyles();
   const {userstore} = useContext(Context)
-  /*
+  /**/
   useEffect( () => {
     (async function(){
+      /*
       try{
                       if(localStorage.getItem('token')){
                         console.log("App: ----Start checkAuth ------------------------------------------")
@@ -41,10 +42,11 @@ function App() {
       }catch(e){
         console.error(e);
       }
+      */
       console.log("userstore.isAuth: " + userstore.isAuth)
     })()
-  }, [])
-*/
+  }, [userstore.isAuth])
+/**/
 
   if(userstore.isLoading ){
     return <div>Loading...</div>
