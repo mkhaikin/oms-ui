@@ -22,38 +22,22 @@ const useStyles = makeStyles({
 })
 
 function App() {
-  const classes = useStyles();
+  /* const classes = useStyles();
   const {userstore} = useContext(Context)
 
 
   const {access, loading, error } = useTypesSelector(state=> state.login)
   //access?.user.userbadge._positionid
-  /**/
+
   useEffect( () => {
     (async function(){
-      /*
-      try{
-                      if(localStorage.getItem('token')){
-                        console.log("App: ----Start checkAuth ------------------------------------------")
-                        //console.log("localStorage.getItem('token'): " + localStorage.getItem('token'))
-                        await userstore.checkAuth()
-                        if(userstore.isAuth)
-                          console.log("isAuth = TRUE")
-                        else
-                          console.log("isAuth = FALSE")
-                        //console.log("User: " + userstore.user.userbadge._positionid)
-                        //console.log("User: -----End  --------------------------------------------------")
-                      }
-      }catch(e){
-        console.error(e);
-      }
-      */
+      
       console.log("access: " + access?.user.userbadge._positionid)
     })()
   //}, [userstore.isAuth])
   }, [])
 
-/**/
+
 
   //if(userstore.isLoading ){
     if(loading ){
@@ -67,16 +51,16 @@ function App() {
       <SignInOutContainer />
     )
   }
-/*
-  if(userstore.isAuth){
-    return (
-      <div>
-      {`${userstore.user.email}  `}
-      {`${userstore.user.userbadge._positionid}`}
-      </div>
-    )
-  }
-*/
+
+//   if(userstore.isAuth){
+//    return (
+//      <div>
+//      {`${userstore.user.email}  `}
+//      {`${userstore.user.userbadge._positionid}`}
+//      </div>
+//    )
+//  } 
+
 
 
   return (
@@ -94,7 +78,11 @@ function App() {
     <CssBaseline/>    
     </React.Fragment>
     </ConfirmProvider>
-  );
-}
+  ); */
+  return (
+    <div>Hello!</div>
+  )
+} 
 
-export default observer(App);
+//export default observer(App);
+export default (App);
