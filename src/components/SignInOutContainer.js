@@ -4,9 +4,11 @@ import AccessPanel from '../components/accessapp/Accesspanel';
 const SignInOutContainer=()=>{
     return(
         <div>
-            <AccessPanel/>
+           Hello from InOut! 
         </div>
     )
 }
 
 export default SignInOutContainer;
+
+//<AccessPanel/>
