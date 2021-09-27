@@ -24,7 +24,7 @@ const useStyles = makeStyles({
 function App() {
   
    const classes = useStyles();
-   
+
   const {userstore} = useContext(Context)
 
 
@@ -50,12 +50,13 @@ function App() {
   //if(!userstore.isAuth){
     if(true){
     return (
-      <div>
+     
       <div>Hello!</div>
-      <SignInOutContainer />
-      </div>
+      
+      
     )
   }
+//<SignInOutContainer />
 
 //   if(userstore.isAuth){
 //    return (
