@@ -22,7 +22,7 @@ const useStyles = makeStyles({
 })
 
 function App() {
-  /* const classes = useStyles();
+   const classes = useStyles();
   const {userstore} = useContext(Context)
 
 
@@ -78,10 +78,8 @@ function App() {
     <CssBaseline/>    
     </React.Fragment>
     </ConfirmProvider>
-  ); */
-  return (
-    <div>Hello!</div>
-  )
+  ); 
+  
 } 
 
 //export default observer(App);
