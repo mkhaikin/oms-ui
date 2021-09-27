@@ -124,7 +124,7 @@ function SignIn() {
               variant="contained"
               color="primary"
               className={classes.submit}
-              onClick={() => dispatch(login(email, password))}
+             
               
             >
               Sign In
@@ -152,3 +152,5 @@ function SignIn() {
 }
 
 export default (SignIn)
+
+// onClick={() => dispatch(login(email, password))}
