@@ -151,4 +151,4 @@ function SignIn() {
   );
 }
 
-export default observer(SignIn)
+export default (SignIn)
