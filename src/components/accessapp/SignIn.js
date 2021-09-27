@@ -17,7 +17,7 @@ import { observer } from 'mobx-react-lite';
 
 import {useTypesSelector} from "../../hooks/menuTypesSelector";
 import { useDispatch } from 'react-redux';
-import { login } from '../../../store/action-creators/accesscall';
+import { login } from 'src/store/action-creators/accesscall';
 
 function Copyright() {
   return (
