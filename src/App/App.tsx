@@ -51,7 +51,7 @@ function App() {
       console.log("access: " + access?.user.userbadge._positionid)
     })()
   //}, [userstore.isAuth])
-  }, [access])
+  }, [])
 
 /**/
 
@@ -62,7 +62,7 @@ function App() {
 
   //let acc: boolean = false;
   //if(!userstore.isAuth){
-    if(!access){
+    if(true){
     return (
       <SignInOutContainer />
     )
