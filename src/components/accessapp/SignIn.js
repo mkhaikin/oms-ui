@@ -70,7 +70,7 @@ function SignIn() {
   const [password, setPassword] = useState('')
   const {userstore} = useContext(Context)
 
-  const {access, loading, error } = useTypesSelector(state=> state.access)
+  const {access, loading, error } = useTypesSelector(state=> state.login)
   const dispatch = useDispatch()
 
   // onClick={() => userstore.login(email, password)}
@@ -124,8 +124,7 @@ function SignIn() {
               variant="contained"
               color="primary"
               className={classes.submit}
-             
-              
+              onClick={() => dispatch(login(email, password))}                                         
             >
               Sign In
             </Button>
@@ -153,4 +152,4 @@ function SignIn() {
 
 export default (SignIn)
 
-// onClick={() => dispatch(login(email, password))}
+// 
