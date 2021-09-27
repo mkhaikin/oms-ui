@@ -15,6 +15,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import {Context} from '../.././index'
 import { observer } from 'mobx-react-lite';
 
+import {useTypesSelector} from "../../hooks/menuTypesSelector";
+import { useDispatch } from 'react-redux';
+import { login } from '../../../store/action-creators/accesscall';
+
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -66,6 +70,11 @@ function SignIn() {
   const [password, setPassword] = useState('')
   const {userstore} = useContext(Context)
 
+  const {access, loading, error } = useTypesSelector(state=> state.access)
+  const dispatch = useDispatch()
+
+  // onClick={() => userstore.login(email, password)}
+
   return (
     <Grid container component="main" className={classes.root}  justify="center" alignItems="center" >
       <CssBaseline />
@@ -115,7 +124,8 @@ function SignIn() {
               variant="contained"
               color="primary"
               className={classes.submit}
-              onClick={() => userstore.login(email, password)}
+              onClick={() => dispatch(login(email, password))}
+              
             >
               Sign In
             </Button>

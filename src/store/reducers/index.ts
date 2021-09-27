@@ -7,6 +7,7 @@ import { routeRecordReducer } from "./routeRecordReducer";
 import { positionsReducer } from "./positionsReducer";
 import { jobReducer} from "./jobReducer";
 import { worklogReducer} from "./worklogReducer";
+import { accessReducer} from "./accessReducer";
 
 export const rootReducer = combineReducers({
     menu: menuReducer,
@@ -17,6 +18,7 @@ export const rootReducer = combineReducers({
     job: jobReducer,
     route: routeRecordReducer,
     worklog: worklogReducer,
+    login: accessReducer,
 })
 
 export type RootState = ReturnType <typeof rootReducer>

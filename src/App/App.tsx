@@ -10,6 +10,7 @@ import CRMContainer from '../components/CRMContainer';
 import SignInOutContainer from '../components/SignInOutContainer'
 import {Context} from '../index'
 import {observer} from 'mobx-react-lite'
+import {useTypesSelector} from "../hooks/menuTypesSelector";
 
 const useStyles = makeStyles({
   appMain:{
@@ -23,6 +24,10 @@ const useStyles = makeStyles({
 function App() {
   const classes = useStyles();
   const {userstore} = useContext(Context)
+
+
+  const {access, loading, error } = useTypesSelector(state=> state.login)
+  //access?.user.userbadge._positionid
   /**/
   useEffect( () => {
     (async function(){
@@ -43,16 +48,21 @@ function App() {
         console.error(e);
       }
       */
-      console.log("userstore.isAuth: " + userstore.isAuth)
+      console.log("access: " + access?.user.userbadge._positionid)
     })()
-  }, [userstore.isAuth])
+  //}, [userstore.isAuth])
+  }, [access])
+
 /**/
 
-  if(userstore.isLoading ){
+  //if(userstore.isLoading ){
+    if(loading ){
     return <div>Loading...</div>
   }
+
   //let acc: boolean = false;
-  if(!userstore.isAuth){
+  //if(!userstore.isAuth){
+    if(!access){
     return (
       <SignInOutContainer />
     )

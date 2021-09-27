@@ -1,5 +1,7 @@
+import { AuthResponse } from "./AuthResponse";
+
 export interface AccessState {
-    access: {};
+    access: null | AuthResponse;
     loading: boolean;
     error: null | string;
 }
@@ -16,7 +18,7 @@ interface FetchAccessAction{
 
 interface FetchAccessSuccessAction{
     type: AccessActionTypes.FETCH_ACCESS_SUCCESS;
-    payload: {};
+    payload: AuthResponse;
 }
 
 interface FetchAccessErrorAction{

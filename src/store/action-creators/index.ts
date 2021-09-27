@@ -6,6 +6,7 @@ import * as RouteRecordActionCreators from './routerecordcall'
 import * as PositionsActionCreators from './positionscall'
 import * as JobActionCreators from './jobcall'
 import * as WorklogActionCreators from './worklogcall'
+import * as LoginActionCreators from './accesscall'
 
 const ActionCreators = {
     ...MenuActionCreators,
@@ -16,5 +17,6 @@ const ActionCreators = {
     ...JobActionCreators,
     ...RouteRecordActionCreators,
     ...WorklogActionCreators,
+    ...LoginActionCreators,
 }
 export default ActionCreators
