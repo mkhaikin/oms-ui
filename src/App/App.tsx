@@ -25,7 +25,7 @@ function App() {
   
    const classes = useStyles();
 
-  const {userstore} = useContext(Context)
+//  const {userstore} = useContext(Context)
 
 
   const {access, loading, error } = useTypesSelector(state=> state.login)
@@ -40,12 +40,12 @@ function App() {
   }, [])
 
 
-
+/*
   //if(userstore.isLoading ){
     if(loading ){
     return <div>Loading...</div>
   }
-
+*/
   //let acc: boolean = false;
   //if(!userstore.isAuth){
     if(true){
