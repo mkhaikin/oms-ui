@@ -48,7 +48,7 @@ function App() {
 */
   //let acc: boolean = false;
   //if(!userstore.isAuth){
-    if(true){
+    if(  typeof access === 'undefined' || access === null ){
     return (
      
       <SignInOutContainer />
