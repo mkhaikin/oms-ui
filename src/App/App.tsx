@@ -11,6 +11,8 @@ import SignInOutContainer from '../components/SignInOutContainer'
 import {Context} from '../index'
 import {observer} from 'mobx-react-lite'
 import {useTypesSelector} from "../hooks/menuTypesSelector";
+import MainWork from '../components/MainWork'
+import { Grid } from 'semantic-ui-react';
 
 const useStyles = makeStyles({
   appMain:{
@@ -30,6 +32,8 @@ function App() {
   //access?.user.userbadge._positionid
   console.log("access in main, user id: " + access?.user.userbadge._id)
   console.log("access in main, user id as number: " + Number(access?.user.userbadge._id))
+
+  const workbench = isNaN( Number(access?.user.userbadge._id)) ? <SignInOutContainer /> : <MainWork/>
   
 
   useEffect( () => {
@@ -85,8 +89,13 @@ function App() {
 //      </div>
 //    )
 //  } 
+return (
+  <Grid.Column >
+    {workbench}
+  </Grid.Column> 
+ )
 
-
+/*
    return (
      <div className="App" >
       {( !isNaN( Number(access?.user.userbadge._id))) ? (
@@ -110,6 +119,7 @@ function App() {
       }
     </div>
   ); 
+  */
   
 } 
 
