@@ -12,7 +12,7 @@ import {Context} from '../index'
 import {observer} from 'mobx-react-lite'
 import {useTypesSelector} from "../hooks/menuTypesSelector";
 import MainWork from '../components/MainWork'
-import { Grid } from 'semantic-ui-react';
+
 
 const useStyles = makeStyles({
   appMain:{
@@ -90,9 +90,9 @@ function App() {
 //    )
 //  } 
 return (
-  <Grid.Column >
+  <div >
     {workbench}
-  </Grid.Column> 
+  </div> 
  )
 
 /*
