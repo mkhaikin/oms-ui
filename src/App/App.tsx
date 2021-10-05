@@ -38,7 +38,7 @@ function App() {
       console.log("access: " + access?.user.userbadge._positionid)
     })()
   //}, [userstore.isAuth])
-  }, [])
+  }, [access])
 
 
 /*
