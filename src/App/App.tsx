@@ -51,6 +51,22 @@ function App() {
   //if(!userstore.isAuth){
     if(access?.user.userbadge._id.length !== 0){
       console.log("access in main, user id: " + access?.user.userbadge._id)
+      return (
+        <ConfirmProvider>
+        <React.Fragment>
+        <div className="page-container">
+        <div className="content-wrap">
+        <  />  
+          <div className= {classes.appMain}>
+           <CRMContainer />                     
+           </div> 
+        </div>   
+        </div>
+        <footer className ="footer" ><Footer/></footer>
+        <CssBaseline/>    
+        </React.Fragment>
+        </ConfirmProvider>
+      ); 
     }
 
     if(  typeof access === 'undefined' || access === null ){
@@ -73,12 +89,12 @@ function App() {
 //  } 
 
 
-  return (
+  /* return (
     <ConfirmProvider>
     <React.Fragment>
     <div className="page-container">
     <div className="content-wrap">
-    <Header />  
+    <  />  
       <div className= {classes.appMain}>
        <CRMContainer />                     
        </div> 
@@ -88,7 +104,7 @@ function App() {
     <CssBaseline/>    
     </React.Fragment>
     </ConfirmProvider>
-  ); 
+  );  */
   
 } 
 
