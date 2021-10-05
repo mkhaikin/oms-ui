@@ -75,7 +75,7 @@ function SignIn() {
 
   // onClick={() => userstore.login(email, password)}
   const tryLogin = (e)=>{
-    e.preventDefault();
+    //e.preventDefault();
     dispatch(login(email, password))
   }
   //onClick={() => dispatch(login(email, password))}
