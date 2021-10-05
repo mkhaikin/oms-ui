@@ -50,7 +50,7 @@ function App() {
   //let acc: boolean = false;
   //if(!userstore.isAuth){
     if(access !== null && access.user.userbadge._id.length > 0){
-      console.log("access in main, user id: " + access?.user.userbadge._id)
+      console.log("!!!! access in main, user id: " + access?.user.userbadge._id)
       return(
         <ConfirmProvider>
         <React.Fragment>
