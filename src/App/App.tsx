@@ -51,6 +51,10 @@ function App() {
   //if(!userstore.isAuth){
     if(access?.user.userbadge._id.length !== 0){
       console.log("access in main, user id: " + access?.user.userbadge._id)
+      return(
+<div>CRM</div>
+
+      )
       /*
       return (
         <ConfirmProvider>
