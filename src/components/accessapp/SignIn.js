@@ -74,6 +74,11 @@ function SignIn() {
   const dispatch = useDispatch()
 
   // onClick={() => userstore.login(email, password)}
+  const tryLogin = (e)=>{
+    e.preventDefault();
+    dispatch(login(email, password))
+  }
+  //onClick={() => dispatch(login(email, password))}
 
   return (
     <Grid container component="main" className={classes.root}  justify="center" alignItems="center" >
@@ -124,7 +129,7 @@ function SignIn() {
               variant="contained"
               color="primary"
               className={classes.submit}
-              onClick={() => dispatch(login(email, password))}                                         
+              onClick={e =>  tryLogin(e)}                                         
             >
               Sign In
             </Button>
