@@ -32,7 +32,7 @@ function App() {
   //access?.user.userbadge._positionid
   console.log("access in main, user id: " + access?.user.userbadge._id)
   console.log("access in main, user id as number: " + Number(access?.user.userbadge._id))
-  console.log("1 ???? access in main, user id length: " + access?.user.userbadge._id.length)
+  
 
   useEffect( () => {
     (async function(){
@@ -51,8 +51,8 @@ function App() {
 */
   //let acc: boolean = false;
   //if(!userstore.isAuth){
-    console.log("2 ???? access in main, user id length: " + access?.user.userbadge._id.length)
-    if(access !== null && access.user.userbadge._id.length > 0){
+    const iD = Number(access?.user.userbadge._id)
+    if(!isNaN(iD)){
       console.log("!!!! access in main, user id: " + access?.user.userbadge._id)
       return(
         <ConfirmProvider>
