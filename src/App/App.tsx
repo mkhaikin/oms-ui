@@ -30,8 +30,8 @@ function App() {
 
   const {access, loading, error } = useTypesSelector(state=> state.login)
   //access?.user.userbadge._positionid
-  console.log("access: " + access?.user.userbadge._positionid)
-  
+  console.log("access in main: " + access?.user.userbadge._positionid)
+
   useEffect( () => {
     (async function(){
       
