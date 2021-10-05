@@ -49,10 +49,10 @@ function App() {
 */
   //let acc: boolean = false;
   //if(!userstore.isAuth){
-    if(access?.user.userbadge._id.length !== 0)
+    if(access === null || access?.user.userbadge._id.length === 0){
       console.log("access in main, user id: " + access?.user.userbadge._id)
 
-    if(  typeof access === 'undefined' || access === null ){
+    //if(  typeof access === 'undefined' || access === null ){
     return (
      
       <SignInOutContainer />
