@@ -52,7 +52,15 @@ function App() {
     if(access !== null && access.user.userbadge._id.length > 0){
       console.log("access in main, user id: " + access?.user.userbadge._id)
       return(
-<div>CRM</div>
+        <ConfirmProvider>
+        <React.Fragment>
+        <div className="page-container">
+        <div className="content-wrap"></div>
+            <div>CRM</div>
+        </div>   
+   
+        </React.Fragment>
+        </ConfirmProvider>
 
       )
       /*
@@ -76,13 +84,13 @@ function App() {
     }
 
     if(  typeof access === 'undefined' || access === null ){
-    return (
-     
-      <SignInOutContainer />
+      return (
       
-      
-    )
-  }
+        <SignInOutContainer />
+        
+        
+      )
+    }
 
 
 //   if(userstore.isAuth){
