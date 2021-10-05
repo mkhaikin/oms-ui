@@ -31,6 +31,7 @@ function App() {
   const {access, loading, error } = useTypesSelector(state=> state.login)
   //access?.user.userbadge._positionid
   console.log("access in main, user id: " + access?.user.userbadge._id)
+  console.log("1 ???? access in main, user id: " + access?.user.userbadge._id.length)
 
   useEffect( () => {
     (async function(){
@@ -49,7 +50,7 @@ function App() {
 */
   //let acc: boolean = false;
   //if(!userstore.isAuth){
-    console.log("???? access in main, user id: " + access?.user.userbadge._id.length)
+    console.log("2 ???? access in main, user id: " + access?.user.userbadge._id.length)
     if(access !== null && access.user.userbadge._id.length > 0){
       console.log("!!!! access in main, user id: " + access?.user.userbadge._id)
       return(
