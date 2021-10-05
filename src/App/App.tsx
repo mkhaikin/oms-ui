@@ -16,8 +16,6 @@ const useStyles = makeStyles({
   appMain:{
     paddingLeft: '160px',
     width: '100%',
-  
- 
   }
 })
 
@@ -51,7 +49,7 @@ function App() {
 */
   //let acc: boolean = false;
   //if(!userstore.isAuth){
-    const iD = Number(access?.user.userbadge._id)
+/*    const iD = Number(access?.user.userbadge._id)
     if(!isNaN(iD)){
       console.log("!!!! access in main, user id: " + access?.user.userbadge._id)
       return(
@@ -66,26 +64,9 @@ function App() {
         </ConfirmProvider>
 
       )
-      /*
-      return (
-        <ConfirmProvider>
-        <React.Fragment>
-        <div className="page-container">
-        <div className="content-wrap">
-        < Header />  
-          <div className= {classes.appMain}>
-           <CRMContainer />                     
-           </div> 
-        </div>   
-        </div>
-        <footer className ="footer" ><Footer/></footer>
-        <CssBaseline/>    
-        </React.Fragment>
-        </ConfirmProvider>
-      ); 
-      */
     }
-
+    */
+/*
     if(  typeof access === 'undefined' || access === null ){
       return (
       
@@ -94,7 +75,7 @@ function App() {
         
       )
     }
-
+*/
 
 //   if(userstore.isAuth){
 //    return (
@@ -107,20 +88,27 @@ function App() {
 
 
    return (
-    <ConfirmProvider>
-    <React.Fragment>
-    <div className="page-container">
-    <div className="content-wrap">
-    <Header  />  
-      <div className= {classes.appMain}>
-       <CRMContainer />                     
-       </div> 
-    </div>   
+     <div className="App" >
+      {( !isNaN( Number(access?.user.userbadge._id))) ? (
+          <ConfirmProvider>
+          <React.Fragment>
+          <div className="page-container">
+          <div className="content-wrap">
+          <Header  />  
+            <div className= {classes.appMain}>
+            <CRMContainer />                     
+            </div> 
+          </div>   
+          </div>
+          <footer className ="footer" ><Footer/></footer>
+          <CssBaseline/>    
+          </React.Fragment>
+          </ConfirmProvider>
+        ) :(
+          <SignInOutContainer />
+        )
+      }
     </div>
-    <footer className ="footer" ><Footer/></footer>
-    <CssBaseline/>    
-    </React.Fragment>
-    </ConfirmProvider>
   ); 
   
 } 
