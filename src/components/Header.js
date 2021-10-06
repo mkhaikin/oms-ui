@@ -5,6 +5,7 @@ import MeetingRoomIcon from '@material-ui/icons/MeetingRoom';
 import {useTypesSelector} from "../hooks/menuTypesSelector";
 import { useDispatch } from 'react-redux';
 import { logout } from '../store/action-creators/accesscall';
+import { createTrue } from 'typescript';
 //import {Context} from '../index'
 
 const useStyles = makeStyles((theme) => ({
@@ -24,7 +25,7 @@ export default function Header(){
     const {access } = useTypesSelector(state=> state.login)
 
     const email = access.user.email
-    const isAuth = (isNaN(access.user.userbadge._id) && access.user.userbadge._activated) ? true : false
+    const isAuth = (isNaN(access.user.userbadge._id) && !access.user.userbadge._activated) ? false : true
 
     const {title } = useTypesSelector(state=> state.menu)
 
