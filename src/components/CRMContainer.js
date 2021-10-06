@@ -5,7 +5,7 @@ import ComponentsList from './ComponentsList'
 const CRMContainer=()=>{
     return(
         <div>
-          CRMContainer  
+          <SideMenu/>  
            
         </div>
     )
