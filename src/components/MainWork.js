@@ -26,7 +26,8 @@ const MainWork = ()=>{
      <div>CRM</div>
     </div>   
     </div>
-     
+    <footer className ="footer" ><Footer/></footer>
+    <CssBaseline/>  
     </React.Fragment>
     </ConfirmProvider>
     )
