@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from 'react'
+import React, { useEffect } from 'react'
 import { withStyles} from "@material-ui/core";
 import IconExpandLess from '@material-ui/icons/ExpandLess'
 import IconExpandMore from '@material-ui/icons/ExpandMore'
@@ -24,7 +24,7 @@ import MenuItemText from './MenuItemText';
 import { useActions } from '../hooks/useActions';
 import { useTypesSelector } from '../hooks/menuTypesSelector';
 
-import {Context} from '../index'
+//import {Context} from '../index'
 
 const drawerWidth = 160
 
@@ -56,7 +56,9 @@ const style = {
 }
 
 const SideMenu = (props) => {
-    const {userstore} = useContext(Context)
+    //const {userstore} = useContext(Context)
+    const {access, loading, error } = useTypesSelector(state=> state.login)
+
     const {classes} = props;
     const [openReports, setOpenReports] = React.useState(false)
     const [openHelp, setOpenHelp] = React.useState(false)
@@ -100,7 +102,8 @@ const SideMenu = (props) => {
     }
     
     let userPosition = false
-    if(userstore.user.userbadge._positionid !== 3)
+    //if(userstore.user.userbadge._positionid !== 3)
+    if(access.user.userbadge._positionid !== 3)
         userPosition = true
 
 
