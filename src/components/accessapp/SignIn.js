@@ -129,7 +129,7 @@ function SignIn() {
               variant="contained"
               color="primary"
               className={classes.submit}
-              onClick={e => { this.tryLogin(e)}}                                         
+              onClick={e => tryLogin(e)}                                         
             >
               Sign In
             </Button>
