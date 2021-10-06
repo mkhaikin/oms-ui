@@ -4,7 +4,7 @@ import {AppBar, Grid, IconButton, InputBase, makeStyles, Toolbar, Typography} fr
 import MeetingRoomIcon from '@material-ui/icons/MeetingRoom';
 import {useTypesSelector} from "../hooks/menuTypesSelector";
 import { useDispatch } from 'react-redux';
-import { logout } from '../../store/action-creators/accesscall';
+import { logout } from '../store/action-creators/accesscall';
 //import {Context} from '../index'
 
 const useStyles = makeStyles((theme) => ({
