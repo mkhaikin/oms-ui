@@ -102,7 +102,7 @@ const SideMenu = (props) => {
     }
     
     let userPosition = false
-    if(userstore.user.userbadge._positionid !== 3)
+    if(access.user.userbadge._positionid !== 3)
             userPosition = true
 
 
