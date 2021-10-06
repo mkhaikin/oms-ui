@@ -22,6 +22,22 @@ const MainWork = ()=>{
     <React.Fragment>
     <div className="page-container">
     <div className="content-wrap">
+     <div>CRM</div>
+    </div>   
+    </div>
+     
+    </React.Fragment>
+    </ConfirmProvider>
+    )
+}
+
+export default MainWork
+
+/*
+<ConfirmProvider>
+    <React.Fragment>
+    <div className="page-container">
+    <div className="content-wrap">
     <Header  />  
       <div className= {classes.appMain}>
       <CRMContainer />                     
@@ -32,7 +48,4 @@ const MainWork = ()=>{
     <CssBaseline/>    
     </React.Fragment>
     </ConfirmProvider>
-    )
-}
-
-export default MainWork
+*/
