@@ -6,7 +6,7 @@ const CRMContainer=()=>{
     return(
         <div>
           <SideMenu/>  
-           
+          <ComponentsList/> 
         </div>
     )
 }
