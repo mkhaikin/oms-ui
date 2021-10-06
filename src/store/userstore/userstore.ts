@@ -62,9 +62,9 @@ export default class UserStore{
         }
     }
 
-    async logout(){
+    async logout(user_id:number){
         try {
-            AuthService.logout().then(()=>{
+            AuthService.logout(user_id).then(()=>{
                 //localStorage.removeItem('token')
                 this.setAuth(false)
                 this.setUser({} as IUser)

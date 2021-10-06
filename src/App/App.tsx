@@ -34,8 +34,6 @@ function App() {
   console.log("access in main, user id as number: " + Number(access?.user.userbadge._id))
 
   const workbench = isNaN( Number(access?.user.userbadge._id)) ? <SignInOutContainer /> : <MainWork/>
-//const workbench =  <MainWork/>
-  
 
   useEffect( () => {
     (async function(){

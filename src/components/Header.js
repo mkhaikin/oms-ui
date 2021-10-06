@@ -3,7 +3,8 @@ import {AppBar, Grid, IconButton, InputBase, makeStyles, Toolbar, Typography} fr
 //import RoomIcon from '@material-ui/icons/Room';
 import MeetingRoomIcon from '@material-ui/icons/MeetingRoom';
 import {useTypesSelector} from "../hooks/menuTypesSelector";
-import {Context} from '../index'
+import { useDispatch } from 'react-redux';
+//import {Context} from '../index'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -19,16 +20,28 @@ const useStyles = makeStyles((theme) => ({
   }));
 
 export default function Header(){
+    const {access } = useTypesSelector(state=> state.login)
 
-    const {userstore} = useContext(Context)
-   
-    const classes = useStyles();
+    const email = access.user.email
+    const isAuth = (isNaN(access.user.userbadge._id) && access.user.userbadge._activated) ? true : false
 
     const {title } = useTypesSelector(state=> state.menu)
+
+    //const {userstore} = useContext(Context)
+   
+    const classes = useStyles();    
+
+    const dispatch = useDispatch()
+
     useEffect( () => {
         console.log("Menu title in Header: " + title)
   
       }, [title])
+
+    const tryLogout = (e)=>{
+        e.preventDefault();
+        dispatch(logout(access.user.userbadge._id))
+    }
 
     return(
         <AppBar position="static">
@@ -43,10 +56,10 @@ export default function Header(){
                         </Typography>
                     </Grid>
                     <Grid item sm></Grid>
-                    {userstore.isAuth ?
+                    {isAuth ?
                     <Grid item>
-                        {`${userstore.user.email}`}
-                        <IconButton size="small" onClick={()=>userstore.logout()}>
+                        {`${email}`}
+                        <IconButton size="small" onClick={e => tryLogout(e)} >
                         <MeetingRoomIcon /> Logout
                            
                         </IconButton>                    

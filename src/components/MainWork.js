@@ -22,6 +22,7 @@ const MainWork = ()=>{
     <React.Fragment>
     <div className="page-container">
     <div className="content-wrap">
+    <Header  /> 
      <div>CRM</div>
     </div>   
     </div>

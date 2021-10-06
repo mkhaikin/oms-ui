@@ -15,10 +15,16 @@ export const accessReducer = (state = initialState, action: AccessAction): Acces
         case AccessActionTypes.FETCH_ACCESS_SUCCESS:
             return {...state, loading: false, access: action.payload}
         case AccessActionTypes.FETCH_ACCESS_ERROR:
-            return {...state, loading: false, error: action.payload}            
-        
+            return {...state, loading: false, error: action.payload}  
+
+        case AccessActionTypes.LOG_OUT:
+            return {...state, loading: true}
+        case AccessActionTypes.LOG_OUT_SUCCESS:
+            return {...state, loading: false, access: null}
+        case AccessActionTypes.LOG_OUT_ERROR:
+            return {...state, loading: false, error: action.payload}           
                    
         default:
             return state
     }
-}
+} 

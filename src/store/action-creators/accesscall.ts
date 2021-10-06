@@ -15,3 +15,16 @@ export const login = (email: string, password: string) => {
         }
     }
 }
+
+export const logout = (user_id: number) => {
+    return async (dispatch: Dispatch<AccessAction>) => {
+        try{
+            dispatch( {type: AccessActionTypes.LOG_OUT})
+            const response = await AuthService.logout(user_id)
+
+            dispatch( {type: AccessActionTypes.LOG_OUT_SUCCESS, payload: response.data})
+        } catch (e){
+            dispatch( {type: AccessActionTypes.LOG_OUT_ERROR, payload: "Error, " + e + " !"})
+        }
+    }
+}
