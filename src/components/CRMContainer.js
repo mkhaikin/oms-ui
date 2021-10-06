@@ -5,12 +5,12 @@ import ComponentsList from './ComponentsList'
 const CRMContainer=()=>{
     return(
         <div>
-            <SideMenu/>
+          CRMContainer  
            
         </div>
     )
 }
 
 export default CRMContainer;
-
+//<SideMenu/>
 // <ComponentsList/>
