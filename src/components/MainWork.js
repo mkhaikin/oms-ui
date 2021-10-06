@@ -1,6 +1,8 @@
 import React from 'react'
 import { ConfirmProvider } from "material-ui-confirm";
 
+import './App.css';
+import { CssBaseline } from '@material-ui/core';
 import Header from './Header';
 import Footer from './Footer';
 import CRMContainer from './CRMContainer';
