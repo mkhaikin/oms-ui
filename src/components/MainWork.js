@@ -7,6 +7,13 @@ import Header from './Header';
 import Footer from './Footer';
 import CRMContainer from './CRMContainer';
 
+const useStyles = makeStyles({
+    appMain:{
+      paddingLeft: '160px',
+      width: '100%',
+    }
+  })
+
 const MainWork = ()=>{
     const classes = useStyles(); 
     
