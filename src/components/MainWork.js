@@ -23,7 +23,9 @@ const MainWork = ()=>{
     <div className="page-container">
     <div className="content-wrap">
     <Header  /> 
-     <div>CRM</div>
+    <div className= {classes.appMain}>
+      <CRMContainer />                     
+    </div> 
     </div>   
     </div>
     <footer className ="footer" ><Footer/></footer>
